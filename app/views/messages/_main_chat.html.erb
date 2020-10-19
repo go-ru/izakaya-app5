@@ -6,30 +6,48 @@
 
 <div class="messages">
   <% @messages.each do |message| %>
-  
-  
+  <% if message.deliver.present? %>
+  <%# 商品が届いたかどうかのif文 %>
     <div class="name">
     <%= message.user.store_name %> 
     </div>
 
     <div class="message-profile">
-      <%= image_tag  message.user.store.image, class: "message-image"%> 
-      <% if @messages.present? %>
-      <div class="message">
-        <%= link_to message_comments_path(message.id) do  %>  
+      <%= image_tag message.user.store.image , class: "message-image"%>
+      <div class="message solution">
+        <%= link_to message_comments_path(message.id) do  %> 
           <div class="request">
-            <%= message.request %>
+            解決しました！
           </div>
-        <% end %> 
+        <% end %>
       </div>
-      <% end %>
     </div>
 
       <div class="data">
-        <%= l message.created_at  %>
+        <%= l message.created_at %>
       </div>
-    
-  <% end %> 
+  <%# ここまで %>
+  <% else %>
+    <div class="name">
+    <%= message.user.store_name %> 
+    </div>
+
+    <div class="message-profile">
+      <%= image_tag message.user.store.image , class: "message-image"%>
+      <div class="message">
+        <%= link_to message_comments_path(message.id) do  %> 
+          <div class="request">
+            <%= message.request %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+      <div class="data">
+        <%= l message.created_at %>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 
 

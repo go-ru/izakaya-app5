@@ -1,0 +1,30 @@
+<div class="main-top">
+  
+  <%= link_to 'IZAKAYA', root_path ,class: 'header-logo',  method: :get %>
+  
+</div>
+
+<div class="deliver-forms">
+  <div class="deliver-wrapper">
+    <%= form_with model: @deliver,  url: message_delivers_path ,local: true do |f| %> 
+    <div class="deliver-form-box">
+        <h4>どのお店に届けましたか？</h4> 
+        <%= f.text_field :store_name, id:"item-image" , class: "deliver-form" %>
+    </div>
+  
+    <div class="deliver-form-box">
+      <h4>どんな商品が届けましたか？</h4>
+      <%= f.text_field :product, id:"item-image" , class: "deliver-form" %>
+    </div>
+
+    <div class="deliver-form-box">
+      <h4>写真を貼り付けてください</h4>
+      <%= f.file_field :image, id:"store_image" , class: "deliver-form" %>
+    </div>
+    <div id='image-list'></div>
+    <div class="deliver-submit">
+      <%= f.submit '送信', class: 'form-submit' %> 
+    </div>
+    <% end %>
+  </div>
+</div>

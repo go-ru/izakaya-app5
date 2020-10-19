@@ -4,8 +4,7 @@ class StoresController < ApplicationController
 
 
   def index
-    # @users = User.left_joins(:delivers).group("store_name").order('count(user_id) DESC')
-    @users = User.all
+    @users = User.left_joins(:delivers).group("store_name").order('count(user_id) DESC')
   end
 
   def new
@@ -36,6 +35,8 @@ class StoresController < ApplicationController
   end
 
   def show
+    giver_count
+    taker_count
   end
 
   private

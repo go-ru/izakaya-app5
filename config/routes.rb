@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:index, :create] do
     resources :comments, only: [:index, :create]
+    resources :delivers, only: [:index, :create]
   end
 end

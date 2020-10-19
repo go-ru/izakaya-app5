@@ -11,4 +11,5 @@ validates :store_name, presence: true
 has_one :store
 has_many :messages
 has_many :comments
+has_many :delivers
 end

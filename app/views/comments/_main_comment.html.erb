@@ -7,10 +7,10 @@
     <div class="name">
       <%= @message.user.store_name %> 
     </div>
-    <%# <% if @message.deliver.present? || @message.user_id == current_user.id %>
-    <%# <% else %> 
-      <%# <%= link_to '商品を届ける', message_delivers_path , class: 'deliver-info', method: :get %>
-    <%# <% end %> 
+    <% if @message.deliver.present? || @message.user_id == current_user.id %>
+    <% else %> 
+      <%= link_to '商品を届ける', message_delivers_path , class: 'deliver-info', method: :get %>
+    <% end %> 
     </div>
 
     <div class="message-profile">

@@ -1,0 +1,26 @@
+.deliver-forms{
+  
+}
+.deliver-wrapper{
+  margin-top:  100px;
+  text-align: center;
+}
+
+h4{
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.form-box{
+  text-align: center;
+}
+
+.deliver-form{
+  width: 300px;
+  height: 50px;
+}
+
+.deliver-submit{
+  margin-top: 30px;
+  text-align: center;
+} 
