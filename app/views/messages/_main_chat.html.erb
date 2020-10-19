@@ -33,7 +33,11 @@
     </div>
 
     <div class="message-profile">
-      <%= image_tag message.user.store.image , class: "message-image"%>
+      <% if message.user.store.present? %>
+        <%= image_tag message.user.store.image , class: "message-image"%>
+      <% else %>
+        <%= image_tag "icon.png" , class: "message-image"%>
+      <% end %>
       <div class="message">
         <%= link_to message_comments_path(message.id) do  %> 
           <div class="request">
