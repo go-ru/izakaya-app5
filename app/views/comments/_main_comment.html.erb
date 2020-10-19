@@ -1,0 +1,58 @@
+<div class="main-top">
+  <%= link_to 'メッセージルームへ戻る', messages_path , method: :get %>
+</div>
+
+<div class="messages">
+  <div class="message-header">
+    <div class="name">
+      <%= @message.user.store_name %> 
+    </div>
+    <%# <% if @message.deliver.present? || @message.user_id == current_user.id %>
+    <%# <% else %> 
+      <%# <%= link_to '商品を届ける', message_delivers_path , class: 'deliver-info', method: :get %>
+    <%# <% end %> 
+    </div>
+
+    <div class="message-profile">
+      <%= image_tag @message.user.store.image , class: "message-image comment-image"%>
+      
+      <div class="message">
+          <div class="request">
+            <%= @message.request %>
+          </div>
+      </div>
+    </div>
+      <div class="data">
+        <%= l @message.created_at %>
+      </div>
+
+    <div class="comments">
+      <% @comments.each do |comment| %> 
+        <% if comment.message_id == @message.id %>
+          <div class="name">
+            <%= comment.user.store_name %> 
+          </div>
+          <div class="comment-profile">
+            <%= image_tag comment.user.store.image , class: "message-image"%>
+            <div class="comment">
+              <div class="text">
+                <%= comment.text %>
+              </div>
+            </div>
+          </div>
+          <div class="data">
+                <%= l comment.created_at %>
+              </div>
+        <% end %>
+      <% end %>
+    </div>
+</div>
+
+
+
+<%= form_with model: @comment, url: message_comments_path ,html: {class: "form"}, local: true do |f|%>
+  <div class="form-input">
+    <%= f.text_field :text, class: 'form-message', placeholder: 'メッセージを送ろう' %>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>

@@ -13,14 +13,14 @@
     </div>
 
     <div class="message-profile">
-      <%# <%= image_tag , class: "message-image"%> 
+      <%= image_tag  message.user.store.image, class: "message-image"%> 
       <% if @messages.present? %>
       <div class="message">
-        <%# <%= link_to message_comments_path(message.id) do  %>  
+        <%= link_to message_comments_path(message.id) do  %>  
           <div class="request">
             <%= message.request %>
           </div>
-        <%# <% end %> 
+        <% end %> 
       </div>
       <% end %>
     </div>
