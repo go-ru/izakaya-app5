@@ -1,0 +1,41 @@
+<div class="main-top">
+  
+  <%= link_to 'IZAKAYA', root_path ,class: 'header-logo',  method: :get %>
+  
+</div>
+
+<div class="messages">
+  <% @messages.each do |message| %>
+  
+  
+    <div class="name">
+    <%= message.user.store_name %> 
+    </div>
+
+    <div class="message-profile">
+      <%# <%= image_tag , class: "message-image"%> 
+      <% if @messages.present? %>
+      <div class="message">
+        <%# <%= link_to message_comments_path(message.id) do  %>  
+          <div class="request">
+            <%= message.request %>
+          </div>
+        <%# <% end %> 
+      </div>
+      <% end %>
+    </div>
+
+      <div class="data">
+        <%= l message.created_at  %>
+      </div>
+    
+  <% end %> 
+</div>
+
+
+<%= form_with model: @message, url: messages_path ,html: {class: "form"}, local: true do |f|%>
+  <div class="form-input">
+    <%= f.text_field :request, class: 'form-message', placeholder: 'メッセージを送ろう' %>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>

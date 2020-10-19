@@ -7,4 +7,6 @@ class User < ApplicationRecord
 validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i }, length: { minimum: 6 }
 
 validates :store_name, presence: true
+
+has_one :store
 end

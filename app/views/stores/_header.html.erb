@@ -4,7 +4,7 @@
     <div class="header-left">
       <ul class="header-menu">
         <% if user_signed_in?  %>
-          <%# <%= link_to "メッセージルーム",  , class: "list" %> 
+          <%= link_to "メッセージルーム", messages_path , class: "list" %>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "list" %>
         <% else %>
           <%= link_to "ログイン", new_user_session_path, class: "list" %>

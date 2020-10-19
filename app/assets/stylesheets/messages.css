@@ -1,0 +1,154 @@
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.header-side {
+  height: 100px;
+  padding: 0 20px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-name{
+  font-size: 35px;
+  letter-spacing: 4px;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.store-names {
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.store-name{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  padding: 20px 0;
+  color: white;
+}
+
+.chat {
+  background-color: #ffffff;
+  width: calc(100% - 300px);
+}
+
+.main-top{
+  height: 80px;
+  padding: 0 40px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messages{
+  background-color: #FAFAFA;
+  height: calc(100vh - 80px - 90px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+
+.message{
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 30px 20px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+  border-radius: 10px;
+}
+
+.message:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #e0edff;
+}
+
+.solution{
+  background: #f0eec2;
+}
+
+.solution:before{
+  border-right: 15px solid #f0eec2;
+}
+
+
+.message-profile{
+  display: flex;
+  align-items: center;  
+}
+
+.message-image{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+} 
+
+.name{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.request{
+  color: #2F3E51;
+}
+
+.data{
+  color: #b9c0c9;
+  text-align: right;
+}
+
+.form{
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.form-input{
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.form-message{
+height: 50px;
+padding-left: 10px;
+width: 100%;
+border: none;
+}
+
+.form-submit{
+  font-size: 16px;
+  color: white;
+  background-color: #38aef0;
+  height: 50px;
+  padding: 0 20px;
+  border: none;
+  margin-left: 15px;
+}
