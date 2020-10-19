@@ -3,7 +3,13 @@
     <%= link_to "IZAKAYA", root_path , class: "header-logo" %> 
     <div class="header-left">
       <ul class="header-menu">
-        
+        <% if user_signed_in?  %>
+          <%# <%= link_to "メッセージルーム",  , class: "list" %> 
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "list" %>
+        <% else %>
+          <%= link_to "ログイン", new_user_session_path, class: "list" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "list" %>
+        <% end %>
       </ul>
     </div>
   </div>
