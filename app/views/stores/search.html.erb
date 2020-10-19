@@ -1,16 +1,17 @@
 <%= render "header" %>
 <div class="center">
   
+
   <div class="search-box">
-    <%= form_with(url: search_stores_path, local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "お店を検索する", class: "search-input" %>
-      <%= form.submit "検索", class: "search-btn" %>
+    <%= form_with(url: search_stores_path, local: true, method: :get, class: "search-form") do |f| %>
+      <%= f.text_field :keyword, placeholder: "お店を検索する", class: "search-input" %>
+      <%= f.submit "検索", class: "search-btn" %>
     <% end %>
   </div>
 
   <div class="center-wrapper">
     <% @users.each do |user| %>
-      <% if user.store.present? %>
+      <%# <% if store.present? %> 
         <div class="store-box">
           <div class="store-image">
             <%= link_to store_path(user.id) do  %> 
@@ -34,7 +35,7 @@
             </ul>
           </div>
         </div>
-      <% end %>
+      <%# <% end %> 
   <% end %> 
 
   </div>

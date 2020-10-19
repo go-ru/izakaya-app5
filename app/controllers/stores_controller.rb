@@ -39,6 +39,10 @@ class StoresController < ApplicationController
     taker_count
   end
 
+  def search
+    @users = User.search(params[:keyword])
+  end
+
   private
 
   def store_params
