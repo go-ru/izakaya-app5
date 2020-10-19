@@ -1,40 +1,41 @@
+
 <%= render "header" %>
 
 <div class="center">
   <div class="store-wrapper">
-    <div class="showing">
+    <div class="newing">
       <div class="show-infos">
         <div class="show-info-name">
-          <%=  %>
+          <%= current_user.store_name %>
         </div>
 
-        <%= form_with model: , url:  , local: true do |f| %>
-          <div class="show-info">
+        <%= form_with model: @store, url: stores_path , local: true do |f| %>
+          <div class="new-info">
             <div>住所</div>
-              <%# <%= f.text_field :address, class: 'show-form', placeholder: "例）東京都渋谷区" %>
+              <%= f.text_field :address, class: 'show-form', placeholder: "例）東京都渋谷区" %>
           </div>
-          <div class="show-info">
+          <div class="new-info">
             <div>営業時間 </div>
-              <%# <%= f.text_field :hour, class: 'show-form', placeholder: "例）17:00 ~ 24:00" %>
+              <%= f.text_field :hour, class: 'show-form', placeholder: "例）17:00 ~ 24:00" %>
           </div>
-          <div class="show-info">
+          <div class="new-info">
             <div>電話番号</div>
-            <%# <%= f.text_field :tel_number, class: 'show-form', placeholder: "例）080-0000-0000" %>
+            <%= f.text_field :tel_number, class: 'show-form', placeholder: "例）080-0000-0000" %>
             </div>
-          <div class="show-info">
+          <div class="new-info">
               <div>カテゴリー</div>
-              <%# <%= f.text_field :genre, class: 'show-form', placeholder: "例）居酒屋、焼肉、イタリアン" %>
+              <%= f.text_field :genre, class: 'show-form', placeholder: "例）居酒屋、焼肉、イタリアン" %>
           </div>
-          <div class="show-info">
+          <div class="new-info">
             <div>予算</div>
-            <%# <%= f.text_field :budget, class: 'show-form', placeholder: "例）3000円〜" %>
+            <%= f.text_field :budget, class: 'show-form', placeholder: "例）3000円〜" %>
           </div>
-          <div class="show-info">
+          <div class="new-info">
             <div>お店の写真を選択してください</div>
-            <%# <%= f.file_field :image , class: "deliver-form" %>
+            <%= f.file_field :image , class: "deliver-form" %>  
           </div>
           <div id='image-list'></div>
-          <%# <%= f.submit "送信", class: "form-submit" %> 
+          <%= f.submit "送信", class: "form-submit" %>
         <% end %>
       </div>
     </div>

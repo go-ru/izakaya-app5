@@ -1,37 +1,38 @@
 <%= render "header" %>
-  <div class="center">
-  
-    <%# 検索　あとで入れる %>
+<div class="center">
   
 
   <div class="center-wrapper">
-    
-
+    <% @users.each do |user| %>
+      <% if user.store.present? %>
         <div class="store-box">
           <div class="store-image">
-            
-
+            <%= link_to store_path(user.id) do  %> 
+              <%= image_tag user.store.image , class: "store-image" %> 
+            <% end %>
           </div>
           <div class="store-infos">
             <div class="name-store">
-              <%=  %>
+              <%= user.store_name %>
             </div>
             <ul>
               <li class="store-info">カテゴリー：
-                <%=  %> 
+                <%= user.store.genre %> 
               </li>
               <li class="store-info">営業時間：
-                <%=  %> 
+                <%= user.store.hour %> 
               </li>
               <li class="store-info">予算：
-                <%=  %>  
+                <%= user.store.budget %>  
               </li>
             </ul>
           </div>
         </div>
+      <% end %>
+  <% end %> 
 
   </div>
-  </div>
+</div>
 
 <footer>
 &copy; 2020 izakaya.com

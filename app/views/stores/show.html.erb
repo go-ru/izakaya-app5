@@ -6,9 +6,9 @@
     <div class="showing showing-show">
       <div class="show-infos">
         <div class="show-info-name">
-          <%=  %>
+          <%= @user.store_name %>
         </div>
-        
+        <% if @user.store.blank? %>
           <div class="show-info">
             住所：まだ記載されていません
           </div>
@@ -25,38 +25,46 @@
             予算：まだ記載されていません
           </div>
         　
-          
+          <% if user_signed_in? && @user.id == current_user.id %>
             <div class="button-right show-button">
-              <%= link_to '作成', , method: :get %> 
+              <%= link_to '作成', new_store_path, method: :get %>
             </div>
+          <% end %>
           
-
-          
+        <% else %>
           <div class="show-info-address show-info">
-            住所：<%=  %>
+            住所：<%= @user.store.address %>
           </div>
           <div class="show-info-hour show-info">
-            営業時間：<%=  %> 
+            営業時間：<%= @user.store.hour %> 
           </div>
           <div class="show-info-tel show-info">
-            電話番号：<%=  %>
+            電話番号：<%= @user.store.tel_number %>
           </div>
           <div class="show-info-genre show-info">
-            カテゴリー：<%=  %>
+            カテゴリー：<%= @user.store.genre %>
           </div>
           <div class="show-info-budget show-info">
-            予算：<%=  %>
+            予算：<%= @user.store.budget %>
           </div>
-          
-
-            <div class="button-right show-button">
-              <%= link_to '編集', , method: :get %>
+          <% if user_signed_in? %>
+            <div class="giver show-info">
+              届けた回数：<%= @giver %> 回
             </div>
+            <div class="taker show-info">
+              届けてもらった回数：<%= @taker %> 回
+            </div> 
+          <% end %>
         
+          <% if user_signed_in? && @user.id == current_user.id %>
+            <div class="button-right show-button">
+              <%= link_to '編集', edit_store_path(@user.store.id), method: :get %>
+            </div>
+          <% end %>
           </div> 
-          <%= image_tag  , class: "show-image" %>
+          <%= image_tag @user.store.image , class: "show-image" %>
         
-        
+        <% end %>
     </div>
   </div>
   </div>
