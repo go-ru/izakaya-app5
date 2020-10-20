@@ -60,7 +60,18 @@
 [![Image from Gyazo](https://i.gyazo.com/77e99658a3a1193156110fa8ebebf91e.png)](https://gyazo.com/77e99658a3a1193156110fa8ebebf91e)
  * 商品を届けるユーザーは届ける店名と食材と食材の写真を貼り付けて送信する。
  * すべての項目を記載しないと登録できません。
-
+ 
+ # 工夫したポイント
+ 
+ # 使用技術（開発環境）
+ ## バックエンド
+ Ruby,Ruby on Rails
+ 
+ ## フロントエンド
+ HTML・CSS,JavaScript
+ 
+ ## データベース
+ MySQL
 
 # テーブル設計
 
