@@ -16,8 +16,8 @@
 
 ###### ログイン情報
 
-* Eメール: usikizoku@0000
-* パスワード: usikizoku0000
+* Eメール: usikizoku@1111
+* パスワード: usikizoku1111
 
  # DEMO
 ## トップページ
