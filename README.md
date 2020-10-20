@@ -20,9 +20,23 @@
 * パスワード: usikizoku0000
 
  # DEMO
+### トップページ
 [![Image from Gyazo](https://i.gyazo.com/8f507f9c8bd8f03422bf47a437b8785b.jpg)](https://gyazo.com/8f507f9c8bd8f03422bf47a437b8785b)
+#### トップページはログインしていないユーザーも閲覧することができます。
+#### 写真をクリックすると詳細ページに遷移します。
+#### 並び順は、お店同士で食材のシェアをして、シェアの数が多い順番に並ぶようにしました。
+#### ログインしたユーザーはお店情報を記載しないと、トップページにお店情報は表示されません。
+
+### 
+[![Image from Gyazo](https://i.gyazo.com/c1d42716f593801531bafaa58675c366.png)](https://gyazo.com/c1d42716f593801531bafaa58675c366)
+####
+####
 
 
+### 詳細ページ
+[![Image from Gyazo](https://i.gyazo.com/dcaa187b6a4264a3799594bba7c6eafe.jpg)](https://gyazo.com/dcaa187b6a4264a3799594bba7c6eafe)
+#### ログインしているユーザーと詳細ページのユーザーが一致していれば編集ページに遷移できます。
+#### 本人ユーザーじゃない限り、編集をすることができません。
 
 
 
