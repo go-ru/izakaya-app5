@@ -20,7 +20,7 @@
 * パスワード: usikizoku0000
 
  # DEMO
- ![top-page](https://gyazo.com/8f507f9c8bd8f03422bf47a437b8785b)
+[![Image from Gyazo](https://i.gyazo.com/8f507f9c8bd8f03422bf47a437b8785b.jpg)](https://gyazo.com/8f507f9c8bd8f03422bf47a437b8785b)
 
 
 
