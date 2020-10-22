@@ -104,7 +104,7 @@
 # ER図
 [![Image from Gyazo](https://i.gyazo.com/f7218ea54041cf1092b053efcebcf1ab.png)](https://gyazo.com/f7218ea54041cf1092b053efcebcf1ab)
 
-# 画面遷移図
+
 
 # テーブル設計
 
