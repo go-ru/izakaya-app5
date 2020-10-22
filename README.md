@@ -102,7 +102,7 @@
  VSCode
  
 # ER図
-[![Image from Gyazo](https://i.gyazo.com/b5637a67755505d126790b98329c80bc.png)](https://gyazo.com/b5637a67755505d126790b98329c80bc)
+[![Image from Gyazo](https://i.gyazo.com/f7218ea54041cf1092b053efcebcf1ab.png)](https://gyazo.com/f7218ea54041cf1092b053efcebcf1ab)
 
 # 画面遷移図
 
