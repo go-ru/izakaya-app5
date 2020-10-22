@@ -100,6 +100,12 @@
  
  ## エディタ
  VSCode
+ 
+# ER図
+$ bin/bundle exec erd --title="従業員ER図" --attributes=primary_keys --filename=employee --filetype=png
+Loading application in 'erd'...
+Generating entity-relationship diagram for 5 models...
+Diagram saved to 'employee.png'.
 
 # テーブル設計
 
